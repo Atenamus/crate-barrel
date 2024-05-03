@@ -1,16 +1,17 @@
 import { useState } from "react";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
-
+import { useToast } from "@chakra-ui/react";
 const Cart = () => {
   // eslint-disable-next-line no-unused-vars
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("CART")) || []
+    JSON.parse(localStorage.getItem("CART")) || [],
   );
   const [userID, setUserID] = useState("");
 
   const navigate = useNavigate();
+  const toast = useToast();
   const removeFromCart = (index) => {
     const updatedCart = cart.filter((item, ind) => ind !== index);
     setCart(updatedCart);
@@ -58,12 +59,24 @@ const Cart = () => {
           body: JSON.stringify(payload),
         });
         const data = await response.json();
-        localStorage.removeItem("CART");
-        alert("Order Placed");
-        navigate("/");
         console.log(data);
+        localStorage.removeItem("CART");
+        toast({
+          title: "Order Placed",
+          description: "We have placed your order.",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+        navigate("/");
       } catch (err) {
         console.log(err);
+        toast({
+          title: "Something Went Wrong!",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
       }
     } else {
       alert("Login to purchase");

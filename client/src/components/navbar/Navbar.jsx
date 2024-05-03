@@ -102,7 +102,7 @@ const Navbar = () => {
           <button className="cart" onClick={handleCart}>
             <AiOutlineShoppingCart
               size={25}
-              style={{ marginTop: "5px" }}
+              style={{ marginTop: "-41px" }}
               color="gray.500"
               ml="20px"
             />
