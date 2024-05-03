@@ -41,7 +41,7 @@ const Register = () => {
       <div id="heading">
         <h2>Create account</h2>
       </div>
-      <div id="register">
+      <div id="control"><div id="register">
         <div className="register" style={{ alignItems: "flex-start" }}>
           <label htmlFor="title">Title</label>
           <br />
@@ -144,7 +144,8 @@ const Register = () => {
             CLICK HERE TO LOG IN
           </button>
         </div>
-      </div>
+      </div></div>
+      
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .login {
   width: 60%;
   margin: auto;
+
   /* border: 2px solid red; */
   display: flex;
   /* padding: 2rem 20rem; */
@@ -14,7 +15,7 @@
 .login-page-btn {
   margin-top: 20px;
   padding: 15px 30px;
-  background-color: #001f49;
+  background-color: #333;
   border: none;
   color: #ffffff;
   width: 90%;
@@ -24,7 +25,7 @@
   height: 10px;
   padding: 15px 15px;
   /* color: #ffffff; */
-  border: 1px solid #001f49;
+  border: 1px solid #333;
 }
 .main {
   font-size: 0.75rem;
@@ -33,15 +34,19 @@
   justify-content: space-between;
   /* border: 2px solid blue; */
 }
+.login-form{
+  padding-left: 80%;
+}
 
 .login-form label,
 .login-page-input {
+  
   margin: 12px 0px;
 }
 
 .login > div > div {
   width: 50%;
-  padding: 20px 100px 40px 20px;
+  padding:61px -12px 48px 105px;
   /* border: 2px solid green; */
 }
 
