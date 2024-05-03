@@ -50,8 +50,8 @@ const Navbar = () => {
   return (
     <nav>
       <Flex justify="space-between" align="center" px="60px">
-        <Flex align="center" gap="20px">
-          <InputGroup
+        <Flex align="center" gap="20px" paddingLeft={350}>
+          {/* <InputGroup
             bg="white"
             display={{
               base: "none",
@@ -72,7 +72,7 @@ const Navbar = () => {
               borderRadius="5px"
               placeholder="What are you looking for ?"
             />
-          </InputGroup>
+          </InputGroup> */}
           <Flex
             py="20px"
             px="10px"

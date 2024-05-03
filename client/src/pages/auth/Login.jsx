@@ -32,7 +32,7 @@ const Login = () => {
   return (
     <div className="top">
       <h2
-        style={{ color: "#001f49", padding: "1rem 21rem" }}
+        style={{ color: "#333", padding: "1rem 35rem" }}
         className="heading"
       >
         My account
@@ -79,7 +79,7 @@ const Login = () => {
             style={{ paddingBlockStart: "0px", flexDirection: "column" }}
           >
             <h3
-              style={{ color: "#001f49", paddingTop: "0px" }}
+              style={{ color: "#333", paddingTop: "0px" }}
               className="heading"
             >
               New customers

@@ -12,7 +12,7 @@ const Homepage = () => {
           <h2 style={{ color: "#ffd000", fontSize: "30px" }}>
             BUY BEST FURNITURES <br /> GET 20% OFF
           </h2>
-          <div>
+          {/* <div>
             <button
               onClick={() => {
                 navigate("/products/bath");
@@ -27,7 +27,7 @@ const Homepage = () => {
             >
               EXPLORE
             </button>
-          </div>
+          </div> */}
         </div>
         <video autoPlay muted loop>
           <source
@@ -115,9 +115,9 @@ const Homepage = () => {
               alt=""
             />
           </div>
-          <button>
+          {/* <button>
             <a href="./shirts.html">SHOP THE COLLECTION</a>
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -135,7 +135,7 @@ const Homepage = () => {
               combine aesthetics and functionality, providing you with the
               ultimate seating experience.
             </p>
-            <button>DISCOVER MORE</button>
+            {/* <button>DISCOVER MORE</button> */}
           </div>
         </div>
         <div>
@@ -151,12 +151,12 @@ const Homepage = () => {
               body&apos;s natural contours, promoting better posture and
               reducing fatigue.
             </p>
-            <button>DISCOVER MORE</button>
+            {/* <button>DISCOVER MORE</button> */}
           </div>
         </div>
         <div>
           <img
-            src="https://www.furnlane.com/cdn/shop/articles/premium-sofa.jpg?v=1652868967"
+            src="https://i.pinimg.com/originals/3a/50/f6/3a50f61c36c9ab5a33b5c003adc190f1.png"
             alt=""
           />
           <div>
@@ -169,7 +169,7 @@ const Homepage = () => {
               you&apos;ll find the perfect sofa to match your unique taste and
               home decor.
             </p>
-            <button>DISCOVER MORE</button>
+            {/* <button>DISCOVER MORE</button> */}
           </div>
         </div>
         <div>
@@ -185,7 +185,7 @@ const Homepage = () => {
               engineered to stand the test of time, offering you years of
               delightful relaxation.
             </p>
-            <button>SHOP NOW</button>
+            {/* <button>SHOP NOW</button> */}
           </div>
         </div>
       </div>
@@ -248,9 +248,9 @@ const Homepage = () => {
             collection caters to every taste and preference. Elevate your sleep
             experience with our meticulously curated bed furniture.
           </p>
-          <button>
+          {/* <button>
             <a href="./shirts.html">FIND OUT MORE</a>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
