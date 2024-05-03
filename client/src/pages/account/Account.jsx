@@ -12,7 +12,6 @@ import {
 const Account = () => {
   const url = "http://localhost:5000";
   let token = localStorage.getItem("token");
-  console.log(token);
 
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
@@ -52,12 +51,8 @@ const Account = () => {
         },
       });
       const data = await res.json();
-      console.log("fetching data");
-      console.log(data.products);
       setProductsData(data);
-      // console.log(data, "data from order history");
       setOrderID(data[0]._id);
-      // setDate(data[0].date_of_purchase);
     } catch (error) {
       console.log(error);
     }

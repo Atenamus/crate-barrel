@@ -1,5 +1,5 @@
 import { connect } from "mongoose";
 
-const connection = connect("mongodb://127.0.0.1:27017/crate&barrel");
+const connection = connect(process.env.MONGO_URL);
 
 export default connection;

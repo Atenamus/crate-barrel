@@ -1,13 +1,13 @@
-import  { useState } from "react";
+import { useState } from "react";
 import "./login.css";
 import { useNavigate } from "react-router-dom";
-
+import { useToast } from "@chakra-ui/react";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
+  const toast = useToast();
   const handleSubmit = async () => {
     const payload = {
       email: email,
@@ -22,19 +22,27 @@ const Login = () => {
     });
     let data = await res.json();
     localStorage.setItem("token", data.token);
-    console.log(data);
-    if (data.msg == "Login Successful" && data.token !== "") {
-      alert("Login Successful");
+    if (data.status === 200) {
+      toast({
+        title: "Logged In!",
+        status: "success",
+        position: "top-right",
+        duration: 2000,
+      });
       navigate("/");
+    } else {
+      toast({
+        title: data.msg,
+        status: "error",
+        position: "top-right",
+        duration: 2000,
+      });
     }
   };
 
   return (
     <div className="top">
-      <h2
-        style={{ color: "#333", padding: "1rem 35rem" }}
-        className="heading"
-      >
+      <h2 style={{ color: "#333", padding: "1rem 35rem" }} className="heading">
         My account
       </h2>
       <div className="login">

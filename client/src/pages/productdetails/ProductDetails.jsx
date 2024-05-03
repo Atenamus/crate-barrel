@@ -17,7 +17,7 @@ const ProductDetails = () => {
     async function fetchData() {
       try {
         const response = await fetch(
-          `${baseServerURL}/products/${category}/${id}`,
+          `${baseServerURL}/products/${category}/${id}`
         );
         const responseData = await response.json();
         setProductData(responseData.data);
@@ -49,6 +49,7 @@ const ProductDetails = () => {
         status: "success",
         duration: 3000,
         isClosable: true,
+        position: "top-right",
       });
     } else {
       toast({
@@ -56,6 +57,7 @@ const ProductDetails = () => {
         status: "error",
         duration: 3000,
         isClosable: true,
+        position: "top-right",
       });
     }
   };
