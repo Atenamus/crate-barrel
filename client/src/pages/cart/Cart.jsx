@@ -6,7 +6,7 @@ const Cart = () => {
   // eslint-disable-next-line no-unused-vars
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("CART")) || [],
+    JSON.parse(localStorage.getItem("CART")) || []
   );
   const [userID, setUserID] = useState("");
 
@@ -67,6 +67,7 @@ const Cart = () => {
           status: "success",
           duration: 3000,
           isClosable: true,
+          position: "top-right",
         });
         navigate("/");
       } catch (err) {
@@ -76,10 +77,17 @@ const Cart = () => {
           status: "error",
           duration: 3000,
           isClosable: true,
+          position: "top-right",
         });
       }
     } else {
-      alert("Login to purchase");
+      toast({
+        title: "Login to purchase",
+        status: "warning",
+        duration: 3000,
+        isClosable: true,
+        position: "top-right",
+      });
     }
   };
   return (

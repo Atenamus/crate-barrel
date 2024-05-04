@@ -25,7 +25,7 @@ const Email = () => {
           borderRadius="5px"
           width="20rem"
           border="1px solid black"
-          alignContentContent="center"
+          alignContent="center"
           size="sm"
         >
           <InputRightElement pointerEvents="none" bg="black">
