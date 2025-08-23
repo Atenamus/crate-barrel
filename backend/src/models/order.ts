@@ -1,14 +1,13 @@
 import { Schema, model } from "mongoose";
 
-const orderSchema = Schema(
+const orderSchema = new Schema(
   {
-    userID: String,
-    products: Array, //[{prod_id: , quantity: }]
+    userID: {
+      type: Schema.Types.ObjectId, ref: 'user'
+    },
+    products: Array,
     date_of_purchase: String,
   },
-  {
-    versionKey: false,
-  }
 );
 
 const orderModel = model("order", orderSchema);

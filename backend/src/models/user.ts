@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const userSchema = Schema({
+const userSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -16,7 +16,6 @@ const userSchema = Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
     unique: true,
   },
   password: {
